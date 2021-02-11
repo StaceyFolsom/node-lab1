@@ -3,7 +3,7 @@ const http = require('http');
 const port = 3000;
 const quotes = require('./quotes');
 
-const randomNumber = Math.floor((Math.random() * 10) + 1);
+const randomNumber = Math.floor((Math.random() * quotes.length));
 const randomQuote = quotes[randomNumber];
 
 http.createServer((request, response) => {
